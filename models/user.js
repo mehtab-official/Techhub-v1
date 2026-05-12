@@ -10,7 +10,9 @@ const userSchema = new mongoose.Schema(
     address:      { type: String, required: true },
     city:         { type: String, required: true },
     postalCode:   { type: String, required: true },
-    role:         { type: String, enum: ['user', 'admin'], default: 'user' },
+    role:                 { type: String, enum: ['user', 'admin'], default: 'user' },
+    resetPasswordToken:   { type: String },
+    resetPasswordExpires: { type: Date },
   },
   { timestamps: true }
 );
